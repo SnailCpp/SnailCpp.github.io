@@ -1,0 +1,24 @@
+/* 覆盖 CDN waifu.css 默认左下角，固定到右下角 */
+#waifu {
+    left: auto !important;
+    right: 10px !important;
+    z-index: 9998 !important;
+}
+
+#waifu-toggle {
+    left: auto !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: -100px !important;
+    writing-mode: vertical-lr;
+    transition: margin-right 1s;
+    z-index: 9998 !important;
+}
+
+#waifu-toggle.waifu-toggle-active {
+    margin-right: -40px;
+}
+
+#waifu-toggle.waifu-toggle-active:hover {
+    margin-right: -20px;
+}
