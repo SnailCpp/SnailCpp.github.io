@@ -1,0 +1,19 @@
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
+
+<div id="app" v-cloak>{{ message }}</div>
+
+<script type="module">
+  import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+  createApp({
+    setup() {
+      return {
+        message: "Hello World!",
+      };
+    },
+  }).mount("#app");
+</script>
