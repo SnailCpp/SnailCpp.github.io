@@ -1,0 +1,28 @@
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
+
+<div id="app" v-cloak>
+  <p>{{ message }}</p>
+  <input v-model="model" />
+  <button @click="setMessage(model)">修改</button>
+</div>
+
+<script type="module">
+  import { createApp, ref } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+  createApp({
+    setup() {
+      const message = ref("Hello World!");
+      const model = ref("");
+
+      function setMessage(value) {
+        message.value = value;
+      }
+
+      return { message, model, setMessage };
+    },
+  }).mount("#app");
+</script>
